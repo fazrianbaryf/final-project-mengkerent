@@ -1,0 +1,187 @@
+{
+  "info": {
+    "_postman_id": "ded85af6-0e7f-463f-9cd0-1a4c07ddecbe",
+    "name": "API Yang Sudah Hosting",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "_exporter_id": "33798470",
+    "_collection_link": "https://www.postman.com/fazrianbyf/workspace/tes/collection/33798470-ded85af6-0e7f-463f-9cd0-1a4c07ddecbe?action=share&source=collection_link&creator=33798470"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Login Customer",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "password": "testing123",
+                "username": "testinguser@gmail.com"
+              }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"testinguser@gmail.com\",\r\n    \"password\": \"testing123\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "https://sipelantis.com/api/login"
+          },
+          "response": []
+        },
+        {
+          "name": "Register Customer",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Testing User\",\r\n    \"username\": \"testinguser\",\r\n    \"email\": \"testinguser@gmail.com\",\r\n    \"gender\": \"laki-laki\",\r\n    \"no_telfon\": \"081234567890\",\r\n    \"pekerjaan\": \"Testing Pekerjaan\",\r\n    \"alamat\": \"Jl. Contoh No. 123\",\r\n    \"password\": \"testing123\",\r\n    \"password_confirmation\": \"testing123\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "https://sipelantis.com/api/register"
+          },
+          "response": []
+        },
+        {
+          "name": "show user by id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "22|xB7PQeWCsP6FAO8pkXurIgNwIsqhx9iijbU1JGjJcb2e7d28"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "url": "https://sipelantis.com/api/users/6"
+          },
+          "response": []
+        },
+        {
+          "name": "edit user by id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "20|uthTTeYRkEUcPp6fECZz4Nj3G8ihx2vS5P9tsYEB1d27348c"
+              }
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"User Testing\",\r\n    \"email\": \"testing@gmail.com\",\r\n    \"password\": \"testing123\",\r\n    \"gender\": \"laki-laki\",\r\n    \"no_telfon\": \"08123456789\",\r\n    \"pekerjaan\": \"Testing Pekerjaan\",\r\n    \"alamat\": \"Testing Alamat\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "https://sipelantis.com/api/users/6"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User Order",
+      "item": [
+        {
+          "name": "View CarUnits",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "22|xB7PQeWCsP6FAO8pkXurIgNwIsqhx9iijbU1JGjJcb2e7d28"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "url": "https://sipelantis.com/api/carunits"
+          },
+          "response": []
+        },
+        {
+          "name": "Cancel Order an",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "23|mJQ79WAz0kljsGB66SsGAKX93hrRzK2aON1YzrV49e44ac83"
+              }
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": "https://sipelantis.com/api/order/7/cancel"
+          },
+          "response": []
+        },
+        {
+          "name": "Nambah-orderan",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "23|mJQ79WAz0kljsGB66SsGAKX93hrRzK2aON1YzrV49e44ac83"
+              }
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"durasi\": \"10\",\r\n    \"pelayanan\": \"Dengan Supir\",\r\n    \"alamat\": \"123 Street Name, City\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "https://sipelantis.com/api/orders/28"
+          },
+          "response": []
+        },
+        {
+          "name": "Transaksi",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "23|mJQ79WAz0kljsGB66SsGAKX93hrRzK2aON1YzrV49e44ac83"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "url": "https://sipelantis.com/api/users/6/transactions"
+          },
+          "response": []
+        },
+        {
+          "name": "Order History",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "token": "23|mJQ79WAz0kljsGB66SsGAKX93hrRzK2aON1YzrV49e44ac83"
+              }
+            },
+            "method": "GET",
+            "header": [],
+            "url": "https://sipelantis.com/api/order-history/6"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
