@@ -42,9 +42,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/users/{id}/transactions', [UserController::class, 'getUserTransactions']);
     Route::get('order-history', [OrderHistoryCT::class, 'index']);
     Route::get('order-history/{userId}', [OrderHistoryCT::class, 'showByUserId']);
-    Route::get('/data-content', [ContentCT::class, 'index'])->name('data-content');
-    Route::post('/promo/add', [ContentCT::class, 'store'])->name('promo.add');
-    Route::get('/terms', [SyaratKetentuanCT::class, 'getTerms']);
 
     Route::post('/logout', [UserLoginCT::class, 'logout']);
 });
